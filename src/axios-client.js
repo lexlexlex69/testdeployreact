@@ -1,8 +1,11 @@
 import axios from "axios"
 
 const axiosClient = axios.create({
-  baseURL: `https://laravelonly-copy-bi5wzqoc8-lexs-projects-4a50776e.vercel.app/api/api/`,
+  baseURL: `http://127.0.0.1:8000/api/`,
 })
+// const axiosClient = axios.create({
+//   baseURL: `https://laravelonly-copy-bi5wzqoc8-lexs-projects-4a50776e.vercel.app/api/api/`,
+// })
 
 axiosClient.interceptors.request.use((config) => {
   const token = localStorage.getItem("ACCESS_TOKEN")
